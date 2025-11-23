@@ -1,48 +1,5 @@
-﻿using System.Diagnostics;
-using Lib;
+﻿using MyConsoleApp;
 
-static int Add(int x, int y)
-{
-    return x + y;
-}
-
-static int Subtract(int x, int y)
-{
-    return x - y;
-}
-
-static int Multiply(int x, int y)
-{
-    return x * y;
-}
-
-static int Divide(int x, int y)
-{
-    return x / y;
-}
-
-static int Mod(int x, int y)
-{
-    return x % y;
-}
-
-static bool AndFunc(bool x, bool y)
-{
-    return x && y;
-}
-
-static bool OrFunc(bool x, bool y)    => x || y;
-
-static bool NotFunc(bool x) => !x;
-
-static bool GreaterThan(int x, int y) => x > y;
-
-static bool LessEqual(int x, int y) => x <= y;
-
-static bool Equal(int x, int y) => x == y;
-
-
-// 1
 int a = 5;
 int b = 3;
 int c = 7;
@@ -55,7 +12,7 @@ bool y = false;
 bool z = true;
 bool isAdmin = false;
 
-OrFunc(AndFunc(GreaterThan(Add(a, Multiply(b, c)), Subtract(d, e)), x), y);
-AndFunc(AndFunc(LessEqual(Multiply(Subtract(a, b), Add(c, d)), e), z), NotFunc(x));
-OrFunc(Equal(Mod(Add(Add(a, b), c), d), 0), AndFunc(GreaterThan(f, e), isAdmin));
-AndFunc(NotFunc(OrFunc(x, y)), GreaterThan(Multiply(a, a), Multiply(b, c)));
+Console.WriteLine(Library.OrFunc(Library.AndFunc(Library.GreaterThan(Library.Add(a, Library.Multiply(b, c)), Library.Subtract(d, e)), x), y));
+Console.WriteLine(Library.AndFunc(Library.AndFunc(Library.LessEqual(Library.Multiply(Library.Subtract(a, b), Library.Add(c, d)), e), z), Library.NotFunc(x)));
+Console.WriteLine(Library.OrFunc(Library.Equal(Library.Mod(Library.Add(Library.Add(a, b), c), d), 0), Library.AndFunc(Library.GreaterThan(f, e), isAdmin)));
+Console.WriteLine(Library.AndFunc(Library.NotFunc(Library.OrFunc(x, y)), Library.GreaterThan(Library.Multiply(a, a), Library.Multiply(b, c))));
