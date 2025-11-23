@@ -1,5 +1,6 @@
+.vscode
 c#/MyConsoleApp/bin
 c#/MyConsoleApp/obj
 typescript/node_modules
-.vscode
 typescript/node_modules
+python/__pycache__
